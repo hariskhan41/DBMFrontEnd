@@ -1,0 +1,28 @@
+
+      
+      <mat-toolbar color="primary">
+        <span>My Application</span>
+        <span class="example-fill-remaining-space"></span>
+        <span>
+            <a href=#>Register</a>
+            &nbsp; &nbsp; 
+        </span>
+        <span>
+          <a href=#>Login</a>
+          &nbsp; &nbsp; 
+        </span>
+        <span>
+          <a [matMenuTriggerFor]="menu" class="menu">Links</a>
+          <!-- <button mat-button >Menu1</button> -->
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item class="my">Item 1</button>
+            <button mat-menu-item class="my">Item 2</button>
+          </mat-menu>
+          &nbsp; &nbsp; 
+          </span>
+      
+      
+      
+        <!-- This fills the remaining space of the current row -->
+      </mat-toolbar>
+     
