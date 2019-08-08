@@ -11,7 +11,9 @@ import {MatMenuModule} from '@angular/material/menu';
 import{MatIconModule} from '@angular/material/icon';
 import { SharedModule } from './shared/shared.module';
 import { CoursesModule } from './courses/courses.module';
+import {MatCardModule} from '@angular/material/card';
 @NgModule({
+
   declarations: [
     AppComponent
   ],
@@ -19,6 +21,7 @@ import { CoursesModule } from './courses/courses.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatCardModule,
     MatButtonModule,
     MatCheckboxModule,
     MatToolbarModule,
