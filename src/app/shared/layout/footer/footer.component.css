@@ -1,4 +1,5 @@
 .my-footer{
+<<<<<<< HEAD
     position: fixed;
    left: 0;
    bottom: 0;
@@ -37,3 +38,8 @@
       background-color: white;
       color: purple;
   }
+=======
+    position: relative;
+    bottom: 0;
+}
+>>>>>>> 3f696024b01a6a4bb611c6c1815412d27b5ff778

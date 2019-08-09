@@ -7,6 +7,13 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material';
+import {MatFileUploadModule} from 'angular-material-fileupload';
+import {BrowserModule} from '@angular/platform-browser';
+import {FormsModule} from '@angular/forms';
+import{ReactiveFormsModule} from '@angular/forms';
+import{MaterialFileInputModule} from 'ngx-material-file-input';
 
 import { SharedRoutingModule } from './shared-routing.module';
 // import { HeaderComponent } from './layout/header/header.component';
@@ -29,7 +36,14 @@ import { HeaderComponent, FooterComponent } from './layout';
     MatCheckboxModule,
     MatToolbarModule,
     MatMenuModule,
-    MatIconModule
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatFileUploadModule,
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MaterialFileInputModule
 
   ]
 })
