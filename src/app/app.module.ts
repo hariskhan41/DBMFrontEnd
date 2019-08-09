@@ -14,10 +14,12 @@ import { CoursesModule } from './courses/courses.module';
 import {MatCardModule} from '@angular/material/card';
 import { LoginRegistrationModule } from './login-registration/login-registration.module';
 
+
 @NgModule({
 
   declarations: [
     AppComponent,
+   
   ],
   imports: [
     BrowserModule,
