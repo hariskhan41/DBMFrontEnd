@@ -12,10 +12,12 @@ import{MatIconModule} from '@angular/material/icon';
 import { SharedModule } from './shared/shared.module';
 import { CoursesModule } from './courses/courses.module';
 import {MatCardModule} from '@angular/material/card';
+import { LoginRegistrationModule } from './login-registration/login-registration.module';
+
 @NgModule({
 
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,8 @@ import {MatCardModule} from '@angular/material/card';
     MatMenuModule,
     MatIconModule,
     SharedModule,
-    CoursesModule
+    CoursesModule,
+    LoginRegistrationModule
   ],
   providers: [],
   bootstrap: [AppComponent],
