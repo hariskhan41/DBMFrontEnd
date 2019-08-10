@@ -9,7 +9,10 @@
         <br>
         <mat-form-field color="accent" appearance="outline" class="form-input">
             <mat-label>Password</mat-label>
-            <input matInput type="password">
+            <!-- <input matInput type="password"> -->
+            <input id="mysecretpassword" type="password" placeholder="Password" matInput showHideInput>
+            <i matSuffix class="material-icons" showHideTrigger="mysecretpassword"
+                [showHideStatus]="{ materialIcon: true, id: 'mysecretpassword' }"></i>
         </mat-form-field>
         <br>
         <br>

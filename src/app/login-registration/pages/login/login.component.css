@@ -22,3 +22,6 @@
     background-color: rgb(47, 2, 47);
     color: white;
 }
+.material-icons:hover{
+    cursor: pointer;
+}

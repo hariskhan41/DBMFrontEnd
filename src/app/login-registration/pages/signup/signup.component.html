@@ -1,1 +1,50 @@
-<p>signup works!</p>
+<mat-card class="card-login">
+    <mat-card-title>Sign Up</mat-card-title>
+    <br>
+    <mat-card-content>
+        <mat-form-field color="accent" appearance="outline" class="form-input">
+            <mat-label>First Name</mat-label>
+            <input matInput>
+        </mat-form-field>
+        <br>
+        <mat-form-field color="accent" appearance="outline" class="form-input">
+            <mat-label>Last Name</mat-label>
+            <input matInput>
+        </mat-form-field>
+        <br>
+        <mat-form-field color="accent" appearance="outline" class="form-input">
+            <mat-label>Email</mat-label>
+            <input matInput type="email">
+        </mat-form-field>
+        <br>
+        <mat-form-field color="accent" appearance="outline" class="form-input">
+            <mat-label>CNIC</mat-label>
+            <input matInput>
+        </mat-form-field>
+        <br>
+        <mat-form-field color="accent" appearance="outline" class="form-input">
+            <mat-label>Date Of Birth</mat-label>
+            <input matInput>
+        </mat-form-field>
+        <br>
+        <mat-form-field color="accent" appearance="outline" class="form-input">
+            <mat-label>Password</mat-label>
+            <!-- <input matInput type="password"> -->
+            <input id="mysecretpassword" type="password" placeholder="Password" matInput showHideInput>
+            <i matSuffix class="material-icons" showHideTrigger="mysecretpassword"
+                [showHideStatus]="{ materialIcon: true, id: 'mysecretpassword' }"></i>
+        </mat-form-field>
+        <br>
+        <mat-form-field color="accent" appearance="outline" class="form-input">
+            <mat-label>Confirm Password</mat-label>
+            <!-- <input matInput type="password"> -->
+            <input id="mysecretconfirmpassword" type="password" placeholder="Password" matInput showHideInput>
+            <i matSuffix class="material-icons" showHideTrigger="mysecretconfirmpassword"
+                [showHideStatus]="{ materialIcon: true, id: 'mysecretconfirmpassword' }"></i>
+        </mat-form-field>
+        <br>
+        <br>
+        <button mat-raised-button class="btn-login" color="primary">Login</button>
+        <br>
+    </mat-card-content>
+</mat-card>

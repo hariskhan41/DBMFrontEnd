@@ -1,0 +1,27 @@
+.form-input{
+    width: 90%;
+
+}
+
+.card-login{
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.btn-login{
+    border: 1px solid black;
+    background-color: #007a5a;
+    color: white;
+    width: 90%;
+    height: 45px;
+}
+
+.btn-login:hover{
+    background-color: rgb(47, 2, 47);
+    color: white;
+}
+.material-icons:hover{
+    cursor: pointer;
+}
