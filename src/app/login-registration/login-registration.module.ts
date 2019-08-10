@@ -14,6 +14,8 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialFileInputModule } from 'ngx-material-file-input';
 import { MatCardModule } from '@angular/material/card';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
 
 import { LoginRegistrationRoutingModule } from './login-registration-routing.module';
 import { LoginComponent } from './pages/login/login.component';
@@ -23,7 +25,7 @@ import { ShowHidePasswordModule } from 'ngx-show-hide-password';
 
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
-  
+
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
     const isSubmitted = form && form.submitted;
     return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
@@ -33,7 +35,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 
 @NgModule({
   declarations: [LoginComponent, SignupComponent, LoginRegistrationComponent],
-  
+
   imports: [
     CommonModule,
     LoginRegistrationRoutingModule,
@@ -48,7 +50,12 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
     ReactiveFormsModule,
     MaterialFileInputModule,
     MatCardModule,
-    ShowHidePasswordModule
+    MatDatepickerModule,
+    ShowHidePasswordModule,
+    MatMomentDateModule
+  ],
+  providers: [
+    MatDatepickerModule
   ]
 })
 export class LoginRegistrationModule { }

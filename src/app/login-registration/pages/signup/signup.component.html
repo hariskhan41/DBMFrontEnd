@@ -4,43 +4,60 @@
     <mat-card-content>
         <mat-form-field color="accent" appearance="outline" class="form-input">
             <mat-label>First Name</mat-label>
-            <input matInput>
+            <input matInput [formControl]="FirstName" required>
+            <mat-error *ngIf="FirstName.invalid">
+                <mat-icon>error</mat-icon> {{getErrorMessageFirstName()}}
+            </mat-error>
         </mat-form-field>
         <br>
         <mat-form-field color="accent" appearance="outline" class="form-input">
             <mat-label>Last Name</mat-label>
-            <input matInput>
+            <input matInput [formControl]="LastName" required>
+            <mat-error *ngIf="LastName.invalid">
+                <mat-icon>error</mat-icon> {{getErrorMessageLastName()}}
+            </mat-error>
         </mat-form-field>
         <br>
+
+
         <mat-form-field color="accent" appearance="outline" class="form-input">
             <mat-label>Email</mat-label>
-            <input matInput type="email">
+            <input matInput placeholder="Enter your email" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">
+                <mat-icon>error</mat-icon> {{getErrorMessageEmail()}}
+            </mat-error>
         </mat-form-field>
+
         <br>
         <mat-form-field color="accent" appearance="outline" class="form-input">
             <mat-label>CNIC</mat-label>
-            <input matInput>
+            <input matInput [formControl]="CNIC" required>
+            <mat-error *ngIf="CNIC.invalid">
+                <mat-icon>error</mat-icon> {{getErrorMessageCNIC()}}
+            </mat-error>
         </mat-form-field>
         <br>
         <mat-form-field color="accent" appearance="outline" class="form-input">
             <mat-label>Date Of Birth</mat-label>
-            <input matInput>
+            <input matInput placeholder="Date Of Birth" [matDatepicker]="simpleDate" [formControl]="DateOfBirth"
+                required>
+            <mat-datepicker-toggle matSuffix [for]="simpleDate"></mat-datepicker-toggle>
+            <mat-datepicker #simpleDate></mat-datepicker>
+            <mat-error *ngIf="DateOfBirth.invalid">
+                <mat-icon>error</mat-icon> {{getErrorMessageDOB()}}
+            </mat-error>
         </mat-form-field>
         <br>
         <mat-form-field color="accent" appearance="outline" class="form-input">
             <mat-label>Password</mat-label>
             <!-- <input matInput type="password"> -->
-            <input id="mysecretpassword" type="password" placeholder="Password" matInput showHideInput>
+            <input id="mysecretpassword" type="password" placeholder="Password" [formControl]="Password" required
+                matInput showHideInput>
             <i matSuffix class="material-icons" showHideTrigger="mysecretpassword"
                 [showHideStatus]="{ materialIcon: true, id: 'mysecretpassword' }"></i>
-        </mat-form-field>
-        <br>
-        <mat-form-field color="accent" appearance="outline" class="form-input">
-            <mat-label>Confirm Password</mat-label>
-            <!-- <input matInput type="password"> -->
-            <input id="mysecretconfirmpassword" type="password" placeholder="Password" matInput showHideInput>
-            <i matSuffix class="material-icons" showHideTrigger="mysecretconfirmpassword"
-                [showHideStatus]="{ materialIcon: true, id: 'mysecretconfirmpassword' }"></i>
+            <mat-error *ngIf="Password.invalid">
+                <mat-icon>error</mat-icon> {{getErrorMessagePassword()}}
+            </mat-error>
         </mat-form-field>
         <br>
         <br>
