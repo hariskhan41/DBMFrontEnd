@@ -15,6 +15,7 @@ import {MatCardModule} from '@angular/material/card';
 import { LoginRegistrationModule } from './login-registration/login-registration.module';
 
 
+
 @NgModule({
 
   declarations: [
@@ -33,7 +34,7 @@ import { LoginRegistrationModule } from './login-registration/login-registration
     MatIconModule,
     SharedModule,
     CoursesModule,
-    LoginRegistrationModule
+    LoginRegistrationModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

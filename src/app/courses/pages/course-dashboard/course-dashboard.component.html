@@ -1,40 +1,91 @@
-<style>
-mat-tab-label:hover{
+<!-- <style>
+  mat-tab-label:hover {
     background-color: purple !important;
     color: white;
-}
+  }
 </style>
 <mat-tab-group>
-        <mat-tab>
-          <ng-template mat-tab-label class="cl">
-            <mat-icon class="example-tab-icon">library_books</mat-icon>
-            Notes
-          </ng-template>
-          Course Notes
-        </mat-tab>
-      
-        <mat-tab>
-          <ng-template mat-tab-label>
-            <i class='fas fa-chalkboard-teacher' style="margin-right: 8px"></i>
-            Lectures
-          </ng-template>
-          Content 2
-        </mat-tab>
-      
-        <mat-tab>
-          <ng-template mat-tab-label>
-               
-            <mat-icon class="example-tab-icon">library_books</mat-icon>
-            Assignments
-          </ng-template>
-      
-          Content 3
-        </mat-tab>
-        <mat-tab>
-            <ng-template mat-tab-label>
-                    <i class="fas fa-bullhorn" style="margin-right: 8px"></i>
-                Announcement
-                </ng-template>
-                Content 3
-            </mat-tab>
-      </mat-tab-group>
+  <mat-tab>
+    <ng-template mat-tab-label class="cl">
+      <mat-icon class="example-tab-icon">library_books</mat-icon>
+      Notes
+    </ng-template>
+    Course Notes
+  </mat-tab>
+
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <i class='fas fa-chalkboard-teacher' style="margin-right: 8px"></i>
+      Lectures
+    </ng-template>
+    Content 2
+  </mat-tab>
+
+  <mat-tab>
+    <ng-template mat-tab-label>
+
+      <mat-icon class="example-tab-icon">library_books</mat-icon>
+      Assignments
+    </ng-template>
+
+    Content 3
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <i class="fas fa-bullhorn" style="margin-right: 8px"></i>
+      Announcement
+    </ng-template>
+    Content 3
+  </mat-tab>
+</mat-tab-group> -->
+
+<!-- #292c2f -->
+<!-- color="primary" backgroundColor="accent" -->
+<!-- class=".alternate-dark-theme" -->
+
+
+<br>
+<br>
+<div class="head">
+  <h1>Database Management System(Th) -- 2019</h1> <button mat-raised-button class="btn-login"
+    color="primary">Enroll</button>
+
+</div>
+
+<br><br>
+<div>
+  <div>
+    <mat-tab-group mat-stretch-tabs class="tabs">
+      <mat-tab class="test">
+        <ng-template mat-tab-label>
+          <i class="fas fa-bullhorn" style="margin-right: 8px"></i>
+          Announcement
+        </ng-template>
+        <app-announcements></app-announcements>
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <i class='fas fa-chalkboard-teacher' style="margin-right: 8px"></i>
+          Lectures
+        </ng-template>
+        Content 2
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label class="cl">
+          <mat-icon class="example-tab-icon">library_books</mat-icon>
+          Notes
+        </ng-template>
+        Content 3
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon class="example-tab-icon">library_books</mat-icon>
+          Assignments
+        </ng-template>
+        Content 4
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>
+
+

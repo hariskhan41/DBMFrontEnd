@@ -19,6 +19,8 @@ import{MatButtonModule} from '@angular/material/button';
 import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
 import {MatTabsModule} from '@angular/material/tabs';
+import { OverlayModule} from '@angular/cdk/overlay';
+import { AnnouncementsComponent } from './pages/announcements/announcements.component';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -28,11 +30,13 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 }
 @NgModule({
   
-  declarations: [CoursesComponent, AllcoursesComponent, AddCoursesComponent, CourseDashboardComponent],
+  declarations: [CoursesComponent, AllcoursesComponent, AddCoursesComponent, CourseDashboardComponent, AnnouncementsComponent],
   exports:[
     CoursesComponent,
     AllcoursesComponent,
-    AddCoursesComponent
+    AddCoursesComponent,
+    CourseDashboardComponent,
+    AnnouncementsComponent
   ],
   imports: [
     CommonModule,
@@ -48,7 +52,8 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
-    MatFileUploadModule
+    MatFileUploadModule,
+    OverlayModule
   ]
 })
 export class CoursesModule {
