@@ -47,8 +47,8 @@
 <br>
 <br>
 <div class="head">
-  <h1>Database Management System(Th) -- 2019</h1> <button mat-raised-button class="btn-login"
-    color="primary">Enroll</button>
+  <h1>Database Management System(Th) -- 2019</h1>
+  <button mat-raised-button class="btn-enroll" color="primary">Enroll</button>
 
 </div>
 
@@ -61,14 +61,18 @@
           <i class="fas fa-bullhorn" style="margin-right: 8px"></i>
           Announcement
         </ng-template>
-        <app-announcements></app-announcements>
+        <br><br>
+        <a routerLink='/AddAnnouncements'><button mat-raised-button class="btn-add" color="primary">Add Announcements</button></a>
+        <br><br>
+        <app-all-announcements></app-all-announcements>
+        <br>
       </mat-tab>
       <mat-tab>
         <ng-template mat-tab-label>
           <i class='fas fa-chalkboard-teacher' style="margin-right: 8px"></i>
           Lectures
         </ng-template>
-        Content 2
+        <app-lectures></app-lectures>
       </mat-tab>
       <mat-tab>
         <ng-template mat-tab-label class="cl">
@@ -87,5 +91,3 @@
     </mat-tab-group>
   </div>
 </div>
-
-

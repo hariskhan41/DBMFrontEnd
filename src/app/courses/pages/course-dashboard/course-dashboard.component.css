@@ -13,10 +13,18 @@
     color: red;
   }
 
-  .btn-login {
+  .btn-enroll {
     background-color: #007a5a;
     color: white;
     width: 100px;
+    height: 45px;
+    float: right;
+  }
+
+  .btn-add {
+    background-color: #007a5a;
+    color: white;
+    margin-left: 5%;
     height: 45px;
   }
 
@@ -30,9 +38,6 @@
     display: inline-block;
   }
 
-  button {
-    float: right;
-  }
 
   .tabs {
     margin-left: 1%;
