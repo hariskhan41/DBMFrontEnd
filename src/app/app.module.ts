@@ -14,6 +14,7 @@ import { CoursesModule } from './courses/courses.module';
 import {MatCardModule} from '@angular/material/card';
 import { LoginRegistrationModule } from './login-registration/login-registration.module';
 import { AnnouncementsModule } from './announcements/announcements.module';
+import { PermissionsModule } from './permissions/permissions.module';
 
 
 
@@ -37,6 +38,7 @@ import { AnnouncementsModule } from './announcements/announcements.module';
     CoursesModule,
     LoginRegistrationModule,
     AnnouncementsModule,
+    PermissionsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
