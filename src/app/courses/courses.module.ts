@@ -9,6 +9,7 @@ import { CourseDashboardComponent } from './pages/course-dashboard/course-dashbo
 import { AnnouncementsComponent } from './pages/announcements/announcements.component';
 import { AnnouncementsModule } from 'src/app/announcements/announcements.module';
 import { LecturesComponent } from './pages/lectures/lectures.component';
+import { NotesModule } from 'src/app/notes';
 
 
 import { MatCardModule } from '@angular/material/card';
@@ -57,6 +58,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
     CommonModule,
 
     AnnouncementsModule,
+    NotesModule,
 
     BrowserModule,
     FormsModule,

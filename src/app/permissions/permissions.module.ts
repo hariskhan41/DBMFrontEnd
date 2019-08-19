@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { PermissionsRoutingModule } from './permissions-routing.module';
 import { AddGroupsComponent } from './pages/add-groups/add-groups.component';
-import { PermissionsComponent } from './pages/permissions/permissions.component';
+import { PermissionsComponent } from './pages/permissions.component';
 
 
 @NgModule({
