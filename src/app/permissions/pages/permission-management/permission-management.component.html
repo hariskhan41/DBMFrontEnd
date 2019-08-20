@@ -1,0 +1,83 @@
+<!-- <mat-card>
+    <mat-card-content>
+        <div fxLayout="row" fxFlex="100" fxLayoutAlign="space-around center">
+            <div fxLayout="column"></div>
+          <div fxLayout="column">Group</div>
+          <div fxLayout="column">User</div>
+          <div fxLayout="column">Select User</div>
+          <div fxLayout="column">Permission</div>
+        </div>
+      </mat-card-content>
+      <mat-card-content>
+          <div fxLayout="row" fxFlex="100" fxLayoutAlign="space-around center">
+              <div fxLayout="column" aria-rowspan="3"><i class="icon-group"></i></div>
+              <div fxLayout="column" aria-rowspan="3">Group</div>
+              <div fxLayout="column" aria-rowspan="3">User</div>
+              <div fxLayout="column" aria-rowspan="3">Select User</div>
+              <div fxLayout="column"><div fxLayout="row" fxFlex="100" fxLayoutAlign="space-around center">
+                  permission 1
+                </div>
+                <div fxLayout="row" fxFlex="100" fxLayoutAlign="space-around center">
+                    permission 1
+                  </div></div>
+            </div>
+      </mat-card-content>
+</mat-card> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<table mat-table  multiTemplateDataRows [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="weight">
+      <th mat-header-cell *matHeaderCellDef> Weight </th>
+      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="symbol">
+      <th mat-header-cell *matHeaderCellDef> Symbol </th>
+      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+    </ng-container>
+    <ng-container matColumnDef="expandedDetail">
+        <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length">
+          <div class="example-element-detail"
+               [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+            <div class="example-element-diagram">
+              <div class="example-element-position"> {{element.position}} </div>
+              <div class="example-element-symbol"> {{element.symbol}} </div>
+              <div class="example-element-name"> {{element.name}} </div>
+              <div class="example-element-weight"> {{element.weight}} </div>
+            </div>
+            <div class="example-element-description">
+              {{element.description}}
+              <span class="example-element-description-attribution"> -- Wikipedia </span>
+            </div>
+          </div>
+        </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+      <tr mat-row *matRowDef="let element; columns: columnsToDisplay;"
+          class="example-element-row"
+          [class.example-expanded-row]="expandedElement === element"
+          (click)="expandedElement = expandedElement === element ? null : element">
+      </tr>
+      <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+   
+  </table>
+  
+  
