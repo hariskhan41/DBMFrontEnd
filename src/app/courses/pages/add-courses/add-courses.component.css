@@ -26,8 +26,3 @@
     width: 90%;
     height: 45px;
 }
-
-.btn-login:hover{
-    background-color: rgb(47, 2, 47);
-    color: white;
-}
