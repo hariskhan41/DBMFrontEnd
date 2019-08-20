@@ -24,60 +24,60 @@
       </mat-card-content>
 </mat-card> -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<table mat-table  multiTemplateDataRows [dataSource]="dataSource" class="mat-elevation-z8">
+<h1 style="margin-left:70px">Permission Management</h1>
+<a><button mat-raised-button class="btn-add" color="primary">Add
+    Group</button></a>
+    <br>
+    <br>
+<table mat-table   [dataSource]="dataSource" class="mat-elevation-z8" style="margin-left:70px">
 
     <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
   
     <!-- Position Column -->
-    <ng-container matColumnDef="position">
-      <th mat-header-cell *matHeaderCellDef> No. </th>
-      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    <ng-container matColumnDef="icons">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element"><i class="fas fa-users" style="font-size:40px "></i> </td>
     </ng-container>
   
     <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Name </th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    <ng-container matColumnDef="Group">
+      <th mat-header-cell *matHeaderCellDef class="head">Group</th>
+      <td mat-cell *matCellDef="let element">{{element.Group}} </td>
     </ng-container>
   
     <!-- Weight Column -->
-    <ng-container matColumnDef="weight">
-      <th mat-header-cell *matHeaderCellDef> Weight </th>
-      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+    <ng-container matColumnDef="Users">
+      <th mat-header-cell *matHeaderCellDef class="head">Users</th>
+      <td mat-cell *matCellDef="let element"><mat-checkbox>All</mat-checkbox></td>
     </ng-container>
   
     <!-- Symbol Column -->
-    <ng-container matColumnDef="symbol">
-      <th mat-header-cell *matHeaderCellDef> Symbol </th>
-      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+    <ng-container matColumnDef="SelectUser">
+      <th mat-header-cell *matHeaderCellDef class="head">Select User</th>
+      <td mat-cell *matCellDef="let element">
+          <mat-form-field color="accent" appearance="outline">
+              <mat-label>Select User</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let food of foods" [value]="food.value">
+                  {{food.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field></td>
     </ng-container>
-    <ng-container matColumnDef="expandedDetail">
-        <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length">
-          <div class="example-element-detail"
-               [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
-            <div class="example-element-diagram">
-              <div class="example-element-position"> {{element.position}} </div>
-              <div class="example-element-symbol"> {{element.symbol}} </div>
-              <div class="example-element-name"> {{element.name}} </div>
-              <div class="example-element-weight"> {{element.weight}} </div>
-            </div>
-            <div class="example-element-description">
-              {{element.description}}
-              <span class="example-element-description-attribution"> -- Wikipedia </span>
-            </div>
-          </div>
-        </td>
+    <ng-container matColumnDef="permission">
+        <th mat-header-cell *matHeaderCellDef class="head">Permissions</th>
+        <td mat-cell *matCellDef="let element"><mat-form-field color="accent" appearance="outline">
+            <mat-label>Assign Permissions</mat-label>
+            <mat-select [formControl]="permissions" multiple>
+              <mat-option *ngFor="let permissions of permissionList" [value]="permissions">{{permissions}}</mat-option>
+            </mat-select>
+          </mat-form-field></td>
       </ng-container>
-    
-      <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
-      <tr mat-row *matRowDef="let element; columns: columnsToDisplay;"
-          class="example-element-row"
-          [class.example-expanded-row]="expandedElement === element"
-          (click)="expandedElement = expandedElement === element ? null : element">
-      </tr>
-      <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
    
+   
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
   
   
