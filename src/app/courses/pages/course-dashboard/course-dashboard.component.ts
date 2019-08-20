@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, VERSION } from '@angular/core';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { HostBinding } from '@angular/core';
 import { Observable, Observer } from 'rxjs';
@@ -16,6 +16,10 @@ export interface ExampleTab {
 })
 export class CourseDashboardComponent implements OnInit {
 
+  ngVersion: string = VERSION.full;
+  matVersion: string = '5.1.0';
+  breakpoint: number;
+
   asyncTabs: Observable<ExampleTab[]>;
 
   constructor() {
@@ -31,6 +35,13 @@ export class CourseDashboardComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.breakpoint = (window.innerWidth <= 800) ? 1 : 1;
+    // this.breakpoint = (window.innerWidth <= 500) ? 1 : 4;
+  }
+
+  onResize(event) {
+    this.breakpoint = (event.target.innerWidth <= 800) ? 1 : 1;
+    // this.breakpoint = (event.target.innerWidth <= 500) ? 1 : 4;
   }
 
 }

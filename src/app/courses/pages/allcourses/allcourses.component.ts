@@ -12,14 +12,14 @@ export class AllcoursesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.breakpoint = (window.innerWidth <= 800 ) ? 2 : 4;
+    // this.breakpoint = (window.innerWidth <= 800 ) ? 2 : 4;
     // this.breakpoint = (window.innerWidth <= 500) ? 1 : 4;
   }
   
-  onResize(event) {
-    this.breakpoint = (event.target.innerWidth <= 800) ? 2 : 4;
-    // this.breakpoint = (event.target.innerWidth <= 500) ? 1 : 4;
-  }
+  // onResize(event) {
+  //   this.breakpoint = (event.target.innerWidth <= 800) ? 2 : 4;
+  //   // this.breakpoint = (event.target.innerWidth <= 500) ? 1 : 4;
+  // }
  
   
 
