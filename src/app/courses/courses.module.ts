@@ -10,6 +10,7 @@ import { AnnouncementsComponent } from './pages/announcements/announcements.comp
 import { AnnouncementsModule } from 'src/app/announcements/announcements.module';
 import { LecturesComponent } from './pages/lectures/lectures.component';
 import { NotesModule } from 'src/app/notes';
+import { AssignmentsModule } from 'src/app/assignments/assignments.module';
 
 
 import { MatCardModule } from '@angular/material/card';
@@ -45,7 +46,8 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
     AddCoursesComponent,
     CourseDashboardComponent,
     AnnouncementsComponent,
-    LecturesComponent],
+    LecturesComponent
+  ],
   exports: [
     CoursesComponent,
     AllcoursesComponent,
@@ -59,6 +61,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 
     AnnouncementsModule,
     NotesModule,
+    AssignmentsModule,
 
     BrowserModule,
     FormsModule,
