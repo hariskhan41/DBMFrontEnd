@@ -17,6 +17,7 @@ import { AnnouncementsModule } from './announcements/announcements.module';
 import { PermissionsModule } from './permissions/permissions.module';
 import { NotesModule } from './notes/notes.module';
 import { AssignmentsModule } from './assignments/assignments.module';
+import { InstituteModule } from './institute/institute.module';
 
 
 
@@ -43,6 +44,7 @@ import { AssignmentsModule } from './assignments/assignments.module';
     PermissionsModule,
     NotesModule,
     AssignmentsModule,
+    InstituteModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
