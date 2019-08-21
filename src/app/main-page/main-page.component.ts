@@ -1,24 +1,26 @@
-import { Component, OnInit, VERSION } from '@angular/core';
+import { Component, OnInit ,VERSION } from '@angular/core';
 
 @Component({
-  selector: 'app-allcourses',
-  templateUrl: './allcourses.component.html',
-  styleUrls: ['./allcourses.component.css']
+  selector: 'app-main-page',
+  templateUrl: './main-page.component.html',
+  styleUrls: ['./main-page.component.css']
 })
-export class AllcoursesComponent implements OnInit {
+export class MainPageComponent implements OnInit {
+
+  constructor() { }
+
   ngVersion: string = VERSION.full;
   matVersion: string = '5.1.0';
   breakpoint: number;
-  constructor() { }
-
   ngOnInit() {
-    if (window.innerWidth <= 800)
-     {
-       this.breakpoint = 2;
-     }
-     else if (window.innerWidth <= 500)
+    if (window.innerWidth <= 500)
      {
        this.breakpoint = 1;
+     }
+   
+     else  if (window.innerWidth <= 800)
+     {
+       this.breakpoint = 2;
      }
      else
      {
@@ -30,7 +32,7 @@ export class AllcoursesComponent implements OnInit {
   }
   
    onResize(event) {
-    if (event.target.innerWidth <= 670)
+    if (event.target.innerWidth <= 550)
     {
       this.breakpoint = 1;
     }
@@ -55,7 +57,4 @@ export class AllcoursesComponent implements OnInit {
   //  this.breakpoint =(event.target.innerWidth <= 600) ? 1:4;
   //   // this.breakpoint = (event.target.innerWidth <= 500) ? 1 : 4;
   }
- 
-  
-
 }

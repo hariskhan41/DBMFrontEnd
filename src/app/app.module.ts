@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
+import {MatGridListModule} from '@angular/material/grid-list'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -16,6 +16,8 @@ import { LoginRegistrationModule } from './login-registration/login-registration
 import { AnnouncementsModule } from './announcements/announcements.module';
 import { PermissionsModule } from './permissions/permissions.module';
 import { NotesModule } from './notes/notes.module';
+import { MainPageComponent } from './main-page/main-page.component';
+
 
 
 
@@ -23,6 +25,8 @@ import { NotesModule } from './notes/notes.module';
 
   declarations: [
     AppComponent,
+    MainPageComponent,
+   
    
   ],
   imports: [
@@ -32,6 +36,7 @@ import { NotesModule } from './notes/notes.module';
     MatCardModule,
     MatButtonModule,
     MatCheckboxModule,
+    MatGridListModule,
     MatToolbarModule,
     MatMenuModule,
     MatIconModule,
