@@ -16,7 +16,8 @@ import { MatInputModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select'
 import { ReactiveFormsModule } from '@angular/forms';
-import {MatTableModule} from '@angular/material/table'
+import {MatTableModule} from '@angular/material/table';
+import { EditComponent } from './pages/edit/edit.component'
 export class MyErrorStateMatcher implements ErrorStateMatcher {
 
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -27,7 +28,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 
 
 @NgModule({
-  declarations: [AllTeachersComponent, TeacherComponent, AddTeacherComponent],
+  declarations: [AllTeachersComponent, TeacherComponent, AddTeacherComponent, EditComponent],
   imports: [
     CommonModule,
     MatSelectModule,

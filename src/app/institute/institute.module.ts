@@ -17,10 +17,11 @@ import { InstituteRoutingModule } from './institute-routing.module';
 import { AllInstitutesComponent } from './pages/all-institutes/all-institutes.component';
 import { AddInstitutesComponent } from './pages/add-institutes/add-institutes.component';
 import { InstitutesComponent } from './pages/institutes.component';
+import { EditComponent } from './pages/edit/edit.component';
 
 
 @NgModule({
-  declarations: [AllInstitutesComponent, AddInstitutesComponent, InstitutesComponent],
+  declarations: [AllInstitutesComponent, AddInstitutesComponent, InstitutesComponent, EditComponent],
   exports: [
     AllInstitutesComponent,
     AddInstitutesComponent,

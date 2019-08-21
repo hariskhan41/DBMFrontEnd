@@ -9,14 +9,25 @@ export interface PeriodicElement {
   UniversityName: string;
   CNIC: string;
   DateOfBirth: string;
-
+  Edit: string;
+  Delete: string;
+  Email: string;
 }
 
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  { FirstName: 'ABC', LastName: 'XYZ', ContactNo: '123', UniversityName: 'UET', CNIC: '1111111111111', DateOfBirth: moment().format('10/7/2019') },
-  { FirstName: 'ABC', LastName: 'XYZ', ContactNo: '123', UniversityName: 'UET', CNIC: '1111111111111', DateOfBirth: moment().format('10/7/2019') },
-  { FirstName: 'ABC', LastName: 'XYZ', ContactNo: '123', UniversityName: 'UET', CNIC: '1111111111111', DateOfBirth: moment().format('10/7/2019') },
+  {
+    FirstName: 'ABC',
+    LastName: 'XYZ',
+    ContactNo: '123',
+    UniversityName: 'UET',
+    CNIC: '1111111111111',
+    DateOfBirth: moment().format('10/7/2019'),
+    Edit: '',
+    Delete: '',
+    Email: 'abc@gmail.com'
+  },
+ 
 ];
 
 @Component({
@@ -36,6 +47,6 @@ export class AllTeachersComponent implements OnInit {
   }
 
   dataSource = ELEMENT_DATA;
-  displayedColumns :string[]=['FirstName', 'LastName', 'CNIC', 'ContactNo', 'DateOfBirth', 'UniversityName'];
+  displayedColumns :string[]=['FirstName', 'LastName', 'CNIC', 'Email', 'ContactNo', 'DateOfBirth', 'UniversityName', 'Edit', 'Delete'];
 
 }

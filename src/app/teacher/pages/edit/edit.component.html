@@ -1,10 +1,10 @@
 <mat-card class="card-login">
-    <mat-card-title>Add Teacher</mat-card-title>
+    <mat-card-title>Edit Teacher</mat-card-title>
     <br>
     <mat-card-content>
         <mat-form-field color="accent" appearance="outline" class="form-input">
             <mat-label>First Name</mat-label>
-            <input matInput [formControl]="FirstName" required>
+            <input matInput [formControl]="FirstName" value="ABC" required>
             <mat-error *ngIf="FirstName.invalid">
                 <mat-icon>error</mat-icon> {{getErrorMessageFirstName()}}
             </mat-error>
@@ -12,7 +12,7 @@
         <br>
         <mat-form-field color="accent" appearance="outline" class="form-input">
             <mat-label>Last Name</mat-label>
-            <input matInput [formControl]="LastName" required>
+            <input matInput [formControl]="LastName" value="XYZ" required>
             <mat-error *ngIf="LastName.invalid">
                 <mat-icon>error</mat-icon> {{getErrorMessageLastName()}}
             </mat-error>
@@ -22,7 +22,7 @@
 
         <mat-form-field color="accent" appearance="outline" class="form-input">
             <mat-label>Email</mat-label>
-            <input matInput placeholder="Enter your email" [formControl]="email" required>
+            <input matInput value="abc@gmail.com" [formControl]="email" required>
             <mat-error *ngIf="email.invalid">
                 <mat-icon>error</mat-icon> {{getErrorMessageEmail()}}
             </mat-error>
@@ -31,7 +31,7 @@
         <br>
         <mat-form-field color="accent" appearance="outline" class="form-input">
             <mat-label>CNIC</mat-label>
-            <input matInput [formControl]="CNIC" required>
+            <input matInput [formControl]="CNIC" value="1111111111111" required>
             <mat-error *ngIf="CNIC.invalid">
                 <mat-icon>error</mat-icon> {{getErrorMessageCNIC()}}
             </mat-error>
@@ -39,7 +39,7 @@
         <br>
         <mat-form-field color="accent" appearance="outline" class="form-input">
             <mat-label>Contact Number</mat-label>
-            <input matInput [formControl]="PhoneNo" required>
+            <input matInput [formControl]="PhoneNo" value="123" required>
             <mat-error *ngIf="PhoneNo.invalid">
                 <mat-icon>error</mat-icon> {{getErrorMessageCellNo()}}
             </mat-error>
@@ -47,7 +47,7 @@
         <br>
         <mat-form-field color="accent" appearance="outline" class="form-input">
             <mat-label>Date Of Birth</mat-label>
-            <input matInput placeholder="Date Of Birth" [matDatepicker]="simpleDate" [formControl]="DateOfBirth"
+            <input matInput value="10/7/2019" [matDatepicker]="simpleDate" [formControl]="DateOfBirth"
                 required>
             <mat-datepicker-toggle matSuffix [for]="simpleDate"></mat-datepicker-toggle>
             <mat-datepicker #simpleDate></mat-datepicker>
