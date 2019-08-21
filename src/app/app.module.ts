@@ -18,6 +18,7 @@ import { PermissionsModule } from './permissions/permissions.module';
 import { NotesModule } from './notes/notes.module';
 import { MainPageComponent } from './main-page/main-page.component';
 import { AssignmentsModule } from './assignments/assignments.module';
+import { TeacherModule } from './teacher/teacher.module';
 
 
 
@@ -48,6 +49,7 @@ import { AssignmentsModule } from './assignments/assignments.module';
     PermissionsModule,
     NotesModule,
     AssignmentsModule,
+    TeacherModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
